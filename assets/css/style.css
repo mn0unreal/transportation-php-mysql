@@ -1,0 +1,73 @@
+.font-1 {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.font-2 {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.cont-main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont-login {
+    background: cornflowerblue;
+    height: 100vh;
+}
+
+.cont-login form {
+    width: 70%;
+}
+
+.cont-main form {
+    border: 2px solid #222;
+    padding: 25px;
+    background: rgb(0 0 0 / 50%);
+    border-radius: 15px;
+}
+
+.cont-main label {
+    /* color: rgb(95, 95, 95); */
+    font-weight: bold;
+}
+
+.cont-main form select {
+    background: #00000073;
+    color: #fff;
+    border: 1px solid #b1b1b1;
+}
+
+.bg-base {
+    /* background: #00000073; */
+    background: #343a40e8;
+}
+
+.bg-base form {
+    background: #ffffff73;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .cont-main {
+        height: auto;
+    }
+}
+
+textarea.form-control,
+.font-1 {
+    color: rgb(255, 255, 255);
+
+}
+
+.form-control:focus {
+    color: white;
+    background-color: #4f5960;
+    border-color: #00000073;
+    /* outline: 0; */
+    box-shadow: none;
+
+}
+
