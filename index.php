@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo ASSETS; ?>/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="<?php echo ASSETS; ?>css/bootstrap.min.css" >
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo ASSETS; ?>/css/style.css" >
+    <link rel="stylesheet" href="<?php echo ASSETS; ?>css/style.css" >
 
     <title>Home Page</title>
     </head>
@@ -152,8 +152,8 @@ $x=1; ?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="<?php echo ASSETS; ?>/js/jquery-3.4.1.min.js" ></script>
-    <script src="<?php echo ASSETS; ?>/js/popper.min.js" ></script>
-    <script src="<?php echo ASSETS; ?>/js/bootstrap.min.js" ></script>
+    <script src="<?php echo ASSETS; ?>js/jquery-3.4.1.min.js" ></script>
+    <script src="<?php echo ASSETS; ?>js/popper.min.js" ></script>
+    <script src="<?php echo ASSETS; ?>js/bootstrap.min.js" ></script>
     </body>
 </html>
