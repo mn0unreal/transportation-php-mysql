@@ -1,5 +1,5 @@
-<?php  require 'config.php';  ?>
-<?php require BL.'functions/validate.php';  ?>
+<?php require 'config.php'; ?>
+<?php require BL . 'functions/validate.php'; ?>
 
 <!doctype html>
 <html lang="en">
@@ -19,7 +19,7 @@
 
 
 
-    <div class="cont-main" style="background:url(<?php echo ASSETS .'images/bg-1.jpg';?>); 
+    <div class="cont-main" style="background:url(<?php echo ASSETS . 'images/bg-1.jpg'; ?>); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -30,44 +30,44 @@
                 <div class="col-sm-12">
 
 <?php
-    if (isset($_POST['submit'])) {
-        $service = $_POST['service'];
-        $city = $_POST['city'];
-        $mobile = $_POST['mobile'];
-        $notes = sanitizeString($_POST['notes']);
-        $name =  sanitizeString($_POST['name']);
-        $email = sanitizeString($_POST['email']);
+if (isset($_POST['submit'])) {
+  $service = $_POST['service'];
+  $city = $_POST['city'];
+  $mobile = $_POST['mobile'];
+  $notes = sanitizeString($_POST['notes']);
+  $name = sanitizeString($_POST['name']);
+  $email = sanitizeString($_POST['email']);
 
-        if (checkEmpty($mobile) && checkEmpty($name)) {
+  if (checkEmpty($mobile) && checkEmpty($name)) {
 
-            $sql  = "INSERT INTO orders (`order_name`,`order_email`,`order_mobile`,`order_serv_id`,`order_city_id`,`order_notes`)
+    $sql = "INSERT INTO orders (`order_name`,`order_email`,`order_mobile`,`order_serv_id`,`order_city_id`,`order_notes`)
                 VALUES ('$name','$email','$mobile','$service','$city','$notes')
             ";
-            $success_message = db_insert($sql);
-            header("refresh:1;url=".BU);
-            /* header("location:".BU); */
-        } else {
-            $error_message = "Please Type Your Name And Your Mobile";
-        }
-    }
+    $success_message = db_insert($sql);
+    header("refresh:1;url=" . BU);
+    /* header("location:".BU); */
+  } else {
+    $error_message = "Please Type Your Name And Your Mobile";
+  }
+}
 ?>
 
 
 
 
                 <form class="row" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="mt-5" >
-                    <?php require BL.'functions/error.php'; ?>
+                    <?php require BL . 'functions/error.php'; ?>
                     <div class="col-sm-6 ">
                         <div class="form-group mt-3">
 
                             <label for="serv" class="font-1">Choose Service</label>
                             <select name="service" id="serv" class="form-control font-1">
                                 <?php $data = getRows('services');
-$x=1; ?>
-                                <?php foreach($data as $row) {   ?>
-                                <option value="<?php echo $row['serv_id']; ?>">
-                                    <?php echo $row['serv_name']; ?>
-                                </option>
+                                $x = 1; ?>
+                                <?php foreach ($data as $row) { ?>
+                                    <option value="<?php echo $row['serv_id']; ?>">
+                                        <?php echo $row['serv_name']; ?>
+                                    </option>
                                 <?php } ?> 
                             </select>
                             
@@ -81,11 +81,11 @@ $x=1; ?>
                             <label for="serv" class="font-1">Choose City</label>
                             <select name="city" id="serv" class="form-control font-1">
                                 <?php $dataCity = getRows('cities');
-$x=1; ?>
-                                <?php foreach($dataCity as $row) {   ?>
-                                <option value="<?php echo $row['city_id']; ?>">
-                                    <?php echo $row['city_name']; ?>
-                                </option>
+                                $x = 1; ?>
+                                <?php foreach ($dataCity as $row) { ?>
+                                    <option value="<?php echo $row['city_id']; ?>">
+                                        <?php echo $row['city_name']; ?>
+                                    </option>
                                 <?php } ?> 
                             </select>
                             
