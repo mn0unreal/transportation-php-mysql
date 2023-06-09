@@ -58,9 +58,9 @@ if (isset($_POST['submit'])) {
                                 <?php $data = getRows('services');
                                 $x = 1; ?>
                                 <?php foreach ($data as $row) { ?>
-                                        <option value="<?php echo $row['serv_id']; ?>">
-                                            <?php echo $row['serv_name']; ?>
-                                        </option>
+                                          <option value="<?php echo $row['serv_id']; ?>">
+                                              <?php echo $row['serv_name']; ?>
+                                          </option>
                                 <?php } ?> 
                             </select>
                             
@@ -75,9 +75,9 @@ if (isset($_POST['submit'])) {
                                 <?php $dataCity = getRows('cities');
                                 $x = 1; ?>
                                 <?php foreach ($dataCity as $row) { ?>
-                                        <option value="<?php echo $row['city_id']; ?>">
-                                            <?php echo $row['city_name']; ?>
-                                        </option>
+                                          <option value="<?php echo $row['city_id']; ?>">
+                                              <?php echo $row['city_name']; ?>
+                                          </option>
                                 <?php } ?> 
                             </select>
                             
