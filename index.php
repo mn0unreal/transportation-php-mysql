@@ -17,8 +17,6 @@
     </head>
     <body>
 
-
-
     <div class="cont-main" style="background:url(<?php echo ASSETS . 'images/bg-1.jpg'; ?>); 
     background-size: cover;
     background-position: center;
@@ -28,7 +26,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-
 <?php
 if (isset($_POST['submit'])) {
   $service = $_POST['service'];
@@ -51,10 +48,6 @@ if (isset($_POST['submit'])) {
   }
 }
 ?>
-
-
-
-
                 <form class="row" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="mt-5" >
                     <?php require BL . 'functions/error.php'; ?>
                     <div class="col-sm-6 ">
@@ -65,15 +58,14 @@ if (isset($_POST['submit'])) {
                                 <?php $data = getRows('services');
                                 $x = 1; ?>
                                 <?php foreach ($data as $row) { ?>
-                                            <option value="<?php echo $row['serv_id']; ?>">
-                                                <?php echo $row['serv_name']; ?>
-                                            </option>
+                                        <option value="<?php echo $row['serv_id']; ?>">
+                                            <?php echo $row['serv_name']; ?>
+                                        </option>
                                 <?php } ?> 
                             </select>
                             
                         </div>
                     </div>
-
 
                     <div class="col-sm-6 ">
                         <div class="form-group mt-3">
@@ -83,15 +75,14 @@ if (isset($_POST['submit'])) {
                                 <?php $dataCity = getRows('cities');
                                 $x = 1; ?>
                                 <?php foreach ($dataCity as $row) { ?>
-                                            <option value="<?php echo $row['city_id']; ?>">
-                                                <?php echo $row['city_name']; ?>
-                                            </option>
+                                        <option value="<?php echo $row['city_id']; ?>">
+                                            <?php echo $row['city_name']; ?>
+                                        </option>
                                 <?php } ?> 
                             </select>
                             
                         </div>
                     </div>
-
 
                     <div class="col-md-4 col-sm-12">
                         <div class="form-group">
@@ -121,8 +112,6 @@ if (isset($_POST['submit'])) {
                     </div>
                     
 
-
-
                     <div class="col-sm-12">
                         <div class="form-group">
 
@@ -131,8 +120,6 @@ if (isset($_POST['submit'])) {
                             
                         </div>
                     </div>
-
-
 
                     
                     <div class="col-sm-12">
@@ -146,9 +133,6 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
     </div>
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
